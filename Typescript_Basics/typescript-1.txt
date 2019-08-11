@@ -1,0 +1,30 @@
+//constructer
+
+
+class Complex1{
+    constructor(private real:number=0,private imag:number=0){
+          
+    }
+    display():void{
+        console.log(this.real+"+i"+this.imag)
+  
+
+       
+         
+        
+    }
+    sum(n1:Complex1,n2:Complex1){
+        this.real=n1.real+n2.real;
+        this.imag=n1.imag+n2.imag;
+        
+
+    }
+}
+
+var comp1=new Complex1(12,3);
+//var comp2=new Complex(20,2);
+comp1.display();
+var res=new Complex1();
+var comp2=new Complex1(13,6);
+res.sum(comp1,comp2);
+res.display();
