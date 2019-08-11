@@ -1,0 +1,17 @@
+<!--<h1>Hello</h1>
+<input type="text" [(ngModel)]="title">
+<input type="number" [(ngModel)]="a"/>
+<input type="number" [(ngModel)]="b"/>
+<h2>{{a+b}}</h2>
+<h2>{{title}}</h2>
+-->
+
+<form #add="ngForm" (ngSubmit)="check(add)">
+    Enter number1:<input type="number" name="no1" [(ngModel)]="a"/>
+    Enter number2:<input type="number" name="no2" [(ngModel)]="b"/>
+    <input type="submit" value="Submit"/>
+</form>
+<div *ngIf="status">
+
+    Sum:{{status}}
+</div>
