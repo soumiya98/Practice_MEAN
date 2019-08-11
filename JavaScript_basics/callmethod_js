@@ -1,0 +1,32 @@
+function BiCycle(speed,gear,tirepressure){
+  this.speed=speed;
+  this.gear=gear;
+  this.tirepressure=tirepressure;
+  this.inflate=function(){
+    this.tirepressure+=5;
+  }
+  
+}
+
+var bi1=new BiCycle(40,5,10);
+console.log(bi1);
+bi1.inflate();
+console.log(bi1);
+
+function Mechanic(name){
+  this.name=name;
+}
+
+var mike=new Mechanic("mike");
+mike.inflate=bi1.inflate;
+console.log(mike);
+
+mike.inflate();
+console.log(mike);
+mike.inflate.call(bi1);
+console.log(bi1);
+console.log(mike);
+/*
+Exception: ReferenceError: Mechanic is not defined
+@Scratchpad/3:20:10
+*/

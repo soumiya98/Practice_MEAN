@@ -1,0 +1,32 @@
+function Emp()
+{
+  (function(){
+  var name="sou";
+  var id=1;
+  
+
+Emp.prototype.setname=function(na){
+ 
+    name=na;
+  };
+ Emp.prototype.getname=function(){
+    return name;
+  };
+
+  
+})();
+}
+
+var e1=new Emp();
+console.log(e1);
+console.log(e1.getname());
+e1.setname("gee");
+console.log(e1.getname());
+console.log(e1.name);
+
+
+
+/*
+Exception: SyntaxError: missing ) in parenthetical
+@Scratchpad/1:17
+*/

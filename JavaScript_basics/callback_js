@@ -1,0 +1,28 @@
+
+
+
+
+
+//var numberseries=[1,2,3,4,5,6,7,8,9,10];
+
+
+function series(lower,upper, test)
+{
+  
+  var k=0;
+  var numberseries=[];
+  for(var j=lower;j<upper;j++)
+    numberseries[k++]=j;
+  for(var i=0;i<numberseries.length;i++)
+    if(test(numberseries[i]))
+      console.log(numberseries[i]);
+
+}
+
+series(1,10,function(number){
+  return number%2==0;
+});
+
+series(4,20,function(number){
+  return number%3==0;
+});

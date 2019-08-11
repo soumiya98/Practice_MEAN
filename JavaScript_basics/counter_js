@@ -1,0 +1,48 @@
+function counter()
+{
+  var count=30;
+  var obj={
+    increment:function(){
+    count++;
+  },
+      decrement:function(){
+        count--;
+      },
+        getcount:function(){
+          return count;
+        },
+    modify:function(co){
+      count=count+co;
+    }
+};
+return obj;
+  
+   
+  
+}
+
+var count1=counter();
+console.log(count1.increment());
+console.log(count1.decrement());
+console.log(count1.getcount());
+console.log(count1.modify(-1));
+console.log(count1.getcount());
+console.log(count1.count);
+
+
+/*
+Exception: SyntaxError: missing } after property list
+@Scratchpad/2:5
+*/
+/*
+Exception: ReferenceError: person1 is not defined
+@Scratchpad/2:22:1
+*/
+/*
+Exception: ReferenceError: count is not defined
+@Scratchpad/2:26:1
+*/
+/*
+Exception: SyntaxError: missing } after property list
+@Scratchpad/2:14
+*/

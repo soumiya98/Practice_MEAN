@@ -1,0 +1,46 @@
+interface animal{
+    voice():void;
+    type:string;
+}
+
+class dog implements animal{
+    voice():void{
+        console.log("Barks");
+    }
+    type="Omnivorous";
+}
+class Lion implements animal{
+    voice():void{
+        console.log("roars");
+    }
+    type="Carnivour";
+}
+
+class Elephant implements animal{
+    voice():void{
+        console.log("trumpets");
+    }
+    type="Herbivour";
+}
+
+class zoo{
+    array(){
+        var ob1=new dog;
+        var ob2=new Lion;
+        var ob3=new Elephant;
+       var arr:animal[]=[ob1,ob2,ob3];      
+       for(var element of arr){
+           console.log(element);
+           element.type;
+           element.voice();
+       }
+       
+
+    }
+
+
+    
+}
+
+var obj=new zoo();
+obj.array();

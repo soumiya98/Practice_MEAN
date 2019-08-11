@@ -1,0 +1,85 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+function Person(id,name)
+{
+  this.id=id;
+  this.name=name;
+}
+Person.prototype.display=function(){
+  console.log("person "+this.name+"with id"+this.id);
+}
+
+
+Employee.prototype=Person.prototype
+
+function Employee(id,name,dept)
+{
+  this.id=id;
+  this.name=name;
+  this.dept=dept;
+}
+Employee.prototype.displayDept=function(){
+  console.log("Employee dept:"+this.dept);
+}
+
+
+
+var pobj=new Person(1,"Soumiya");
+console.log(pobj);
+pobj.display();
+
+
+var eobj=new Employee(1,"Soumiya","CSE");
+console.log(eobj);
+eobj.displayDept();
+
+
+eobj.display();
+
+
+
+pobj.displayDept();
+
+
+
+
+
+
+
+
+/*
+Exception: ReferenceError: pname is not defined
+Person.prototype.display@Scratchpad/3:16:3
+@Scratchpad/3:20:6
+*/
+/*
+Exception: ReferenceError: Employee is not defined
+@Scratchpad/3:30:1
+*/
+/*
+Exception: TypeError: pobj.displayDept is not a function
+@Scratchpad/3:35:6
+*/
+/*
+Exception: TypeError: eobj.displayDept is not a function
+@Scratchpad/3:39:6
+*/
+/*
+Exception: TypeError: eobj.display is not a function
+@Scratchpad/3:43:6
+*/
+/*
+Exception: TypeError: eobj.displayDept is not a function
+@Scratchpad/3:41:6
+*/
+/*
+Exception: TypeError: eobj.displayDept is not a function
+@Scratchpad/3:41:6
+*/
